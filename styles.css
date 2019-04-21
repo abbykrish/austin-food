@@ -1,3 +1,8 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
 #table tr:nth-child(even){background-color: #E0F2F1;}
 #table tr:hover {background-color: #ddd;}
 .table-fixed thead th {
@@ -10,4 +15,36 @@
 }
 td:first-child {
   font-weight: bold
+}
+
+.main_window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.locations{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    flex-basis: fill; 
+    margin-top: 20px;
+}
+
+.right{
+    margin-right: 20px;
+}
+
+a:hover{
+    color: #26A69A;
+    text-decoration: normal;
+}
+
+a{
+    font-weight: bold;
+    color: black;
 }
