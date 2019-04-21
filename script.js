@@ -5,15 +5,25 @@ $(document).ready(function() {
       url: 'restaurants.json',
       success: function(data){
         console.log(data)
-        $('#table').dynatable({
+        var dynatable = $('#table').dynatable({
           dataset: {
             records: data
           },
           features:{
             paginate: false,
-            search: false
           }
+        }).data('dynatable');
+        $('#search-rating').change( function() {
+          var value = $(this).val();
+          if (value === "") {
+            dynatable.queries.remove("food");
+          } else {
+            dynatable.queries.add("food",value);
+          }
+          dynatable.process();
         });
       }
     });
+
+
 } );
