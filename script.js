@@ -28,7 +28,7 @@ $(document).ready(function() {
         $('#search-price').change( function() {
           var value = $(this).val();
           if (value === "") {
-            dynatable.queries.remove("food");
+            dynatable.queries.remove("price");
           } else {
             dynatable.queries.add("price",value);
           }
