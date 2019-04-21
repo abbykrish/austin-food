@@ -8,6 +8,10 @@ $(document).ready(function() {
         $('#table').dynatable({
           dataset: {
             records: data
+          },
+          features:{
+            paginate: false,
+            search: false
           }
         });
       }

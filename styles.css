@@ -1,2 +1,13 @@
-#table tr:nth-child(even){background-color: #f2f2f2;}
+#table tr:nth-child(even){background-color: #E0F2F1;}
 #table tr:hover {background-color: #ddd;}
+.table-fixed thead th {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #26A69A;
+    color: #fff;
+}
+td:first-child {
+  font-weight: bold
+}
