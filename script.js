@@ -11,6 +11,9 @@ $(document).ready(function() {
           },
           features:{
             paginate: false,
+          }, 
+          inputs: {
+            queryEvent: 'keyup'
           }
         }).data('dynatable');
         $('#search-rating').change( function() {
@@ -19,6 +22,15 @@ $(document).ready(function() {
             dynatable.queries.remove("food");
           } else {
             dynatable.queries.add("food",value);
+          }
+          dynatable.process();
+        });
+        $('#search-price').change( function() {
+          var value = $(this).val();
+          if (value === "") {
+            dynatable.queries.remove("food");
+          } else {
+            dynatable.queries.add("price",value);
           }
           dynatable.process();
         });
